@@ -18,4 +18,3 @@ credentials:
     type: 'post'
 login:
   domain: 'www.somtoday.nl'
-  path: '/login'
