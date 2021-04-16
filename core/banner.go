@@ -82,7 +82,7 @@ func Banner() {
 
 	putAsciiArt("__                                     __\n")
 	putAsciiArt("_   @@     @@@@@@@@@@@@@@@@@@@     @@   _")
-	printLogo(`       _                 _____                 _ )
+	printLogo(`       _                 _____                 _ `)
 	fmt.Println()
 	putAsciiArt("  @@@@    @@@@@@@@@@@@@@@@@@@@@    @@@@  ")
 	printLogo(`      | |               |  __ \               | |`)
