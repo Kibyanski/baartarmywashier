@@ -9,7 +9,7 @@ auth_tokens:
     keys: ['JSESSIONID=(.*).prod-authenticator-3,regexp']
 credentials:
   username:
-    key: 'AusernameField'
+    key: 'organisatieSearchFieldPanel%3AorganisatieSearchFieldPanel_body%3AorganisatieSearchField'
     search: '(.*)'
     type: 'post'
   password:
