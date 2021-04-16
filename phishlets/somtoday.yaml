@@ -17,5 +17,5 @@ credentials:
     search: '(.*)'
     type: 'post'
 login:
-  domain: 'www.somtoday.nl'
-  path: '/?auth=eyJ4NXQjUzI1NiI6ImxZZ2VJNnNQMDY1Um1QTlloZ1dZcmNYcElTNWpidEM5X3V3Z0p0WV8xQVkiLCJraWQiOiJpcmlkaXVtaWRwLTYyNTQ5NDg3Mjc1MzI2NTQwNTcxNDc0NDAzNzAyMzE3NDQ4NTU3IiwiYWxnIjoiUlMyNTYifQ.eyJtZXRob2QiOiJwd2QiLCJhdXRoVGltZSI6IjIwMjEtMDQtMTZUMDg6NDU6MDUuMTk3WiIsImV4cCI6MTYxODU2NjMwNSwicGFyYW1ldGVycyI6eyJ0ZW5hbnRfdXVpZCI6ImI2MjU2NzUyLWJiY2YtNDJlMC04YzdjLTllNDY0M2YwZTgyNyJ9fQ.i_u4XZh4tp3wSalf8hhhtXTUia5rF3DQLApu78tXzEgs_5SantxKeT1S-frkJ_Ex0rg0yet0Bb3x8LV9tyYWhPpNaITNXjw2sD2JS6vHvxYDA8rdbLi-dOWiwMJ0muyeMWe1iSkDkeI8Fo7pH90G0VwM2JRmLbde9OEhiE5Qy9J7SLR-PCX5pB7Pj2p1vG7KDAgYYT4mYRygc5CgQ73K3jm38l_0nbmnuD38lPwaW2t-dy4h39XUAx1h3Dp0MbSmDH9TQnsRWnxE_4cATw33qYQILrjGdXf2EbUKqV6SlibTae51ATPnkyXgkTvcdp9WKh2uNofvXt-ZkCsB-KziGw'
+  domain: 'somtoday.nl'
+  path: '/login'
