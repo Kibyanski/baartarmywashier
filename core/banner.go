@@ -56,7 +56,7 @@ func printLogo(s string) {
 
 func printUpdateName() {
 	nameClr := color.New(color.FgHiRed)
-	txt := nameClr.Sprintf("                 - --  Gone Phishing  -- -")
+	txt := nameClr.Sprintf("                 - --  Jerp Panel  -- -")
 	fmt.Fprintf(color.Output, "%s", txt)
 }
 
@@ -65,7 +65,7 @@ func printOneliner1() {
 	versionClr := color.New(color.FgGreen)
 	textClr := color.New(color.FgHiBlack)
 	spc := strings.Repeat(" ", 10-len(VERSION))
-	txt := textClr.Sprintf("      by Kuba Gretzky (") + handleClr.Sprintf("@mrgretzky") + textClr.Sprintf(")") + spc + textClr.Sprintf("version ") + versionClr.Sprintf("%s", VERSION)
+	txt := textClr.Sprintf("      by Jerp (") + handleClr.Sprintf("@jerp") + textClr.Sprintf(")") + spc + textClr.Sprintf("version ") + versionClr.Sprintf("%s", VERSION)
 	fmt.Fprintf(color.Output, "%s", txt)
 }
 
@@ -82,25 +82,29 @@ func Banner() {
 
 	putAsciiArt("__                                     __\n")
 	putAsciiArt("_   @@     @@@@@@@@@@@@@@@@@@@     @@   _")
-	printLogo(`    ___________      __ __           __               `)
+	printLogo(`       _                 _____                 _ `)
 	fmt.Println()
 	putAsciiArt("  @@@@    @@@@@@@@@@@@@@@@@@@@@    @@@@  ")
-	printLogo(`    \_   _____/__  _|__|  |    ____ |__| ____ ___  ___`)
+	printLogo(`      | |               |  __ \               | |`)
 	fmt.Println()
 	putAsciiArt("  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  ")
-	printLogo(`     |    __)_\  \/ /  |  |   / __ \|  |/    \\  \/  /`)
+	printLogo(`      | | ___ _ __ _ __ | |__) |_ _ _ __   ___| |`)
 	fmt.Println()
 	putAsciiArt("    @@@@@@@@@@###@@@@@@@###@@@@@@@@@@    ")
-	printLogo(`     |        \\   /|  |  |__/ /_/  >  |   |  \>    < `)
+	printLogo(`  _   | |/ _ \ '__| '_ \|  ___/ _` | '_ \ / _ \ |`)
 	fmt.Println()
 	putAsciiArt("      @@@@@@@#####@@@@@#####@@@@@@@      ")
-	printLogo(`    /_______  / \_/ |__|____/\___  /|__|___|  /__/\_ \`)
+	printLogo(` | |__| |  __/ |  | |_) | |  | (_| | | | |  __/ |`)
 	fmt.Println()
 	putAsciiArt("       @@@@@@@###@@@@@@@###@@@@@@@       ")
-	printLogo(`            \/              /_____/         \/      \/`)
+	printLogo(`  \____/ \___|_|  | .__/|_|   \__,_|_| |_|\___|_|`)
 	fmt.Println()
 	putAsciiArt("      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@      \n")
+	printLogo(`                  | |                            `)
+	fmt.Println()
 	putAsciiArt("     @@@@@WW@@@WW@@WWW@@WW@@@WW@@@@@     ")
+	printLogo(`                  |_|                            `)
+	fmt.Println()
 	printUpdateName()
 	fmt.Println()
 	putAsciiArt("    @@@@@@WW@@@WW@@WWW@@WW@@@WW@@@@@@    \n")
