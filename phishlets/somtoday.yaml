@@ -12,8 +12,8 @@ auth_tokens:
     keys: ['JSESSIONID']
 
 auth_urls:
-  - '/home/'
-  - '/home/.*'  
+  - 'elo.somtoday.nl/home/'
+  - 'elo.somtoday.nl/home/*'  
  
 
 credentials:
