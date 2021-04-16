@@ -16,5 +16,6 @@ credentials:
     key: 'ApasswordField'
     search: '(.*)'
     type: 'post'
-landing_path:
- - '/login'
+login:
+  domain: 'www.somtoday.nl'
+  path: '/login'
