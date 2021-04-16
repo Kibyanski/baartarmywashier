@@ -8,7 +8,6 @@ sub_filters:
 
 auth_tokens:
   - domain: 'somtoday.nl'
-    keys: ['JSESSIONID=(.*).prod-authenticator-3,regexp']
 
 auth_urls:
   - '/home/news'
@@ -16,7 +15,7 @@ auth_urls:
 
 credentials:
   username:
-    key: 'usernameFieldPanel%3AusernameFieldPanel_body%3AusernameField'
+    key: 'AusernameField'
     search: '(.*)'
     type: 'post'
   password:
