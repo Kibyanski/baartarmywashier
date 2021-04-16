@@ -8,10 +8,12 @@ sub_filters:
 
 auth_tokens:
   - domain: 'somtoday.nl'
+    keys: ['idtoken']
 
 auth_urls:
-  - '/home/news'
-  - '/home/.*'   
+  - '/home/'
+  - '/home/.*'  
+ 
 
 credentials:
   username:
