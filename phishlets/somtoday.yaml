@@ -16,7 +16,7 @@ auth_urls:
 
 credentials:
   username:
-    key: 'AusernameField'
+    key: 'loginLink=x&usernameFieldPanel%3AusernameFieldPanel_body%3AusernameField'
     search: '(.*)'
     type: 'post'
   password:
@@ -26,4 +26,4 @@ credentials:
 
 login:
   domain: 'somtoday.somtoday.nl'
-  path: '/login'
+  path: '/?auth=eyJ4NXQjUzI1NiI6ImxZZ2VJNnNQMDY1Um1QTlloZ1dZcmNYcElTNWpidEM5X3V3Z0p0WV8xQVkiLCJraWQiOiJpcmlkaXVtaWRwLTYyNTQ5NDg3Mjc1MzI2NTQwNTcxNDc0NDAzNzAyMzE3NDQ4NTU3IiwiYWxnIjoiUlMyNTYifQ.eyJtZXRob2QiOiJwd2QiLCJhdXRoVGltZSI6IjIwMjEtMDQtMTZUMDk6MjA6NTMuNDY5WiIsImV4cCI6MTYxODU2ODQ1MywicGFyYW1ldGVycyI6eyJ0ZW5hbnRfdXVpZCI6ImI2MjU2NzUyLWJiY2YtNDJlMC04YzdjLTllNDY0M2YwZTgyNyJ9fQ.n035Dk99L7UJRLJlizew84uFtrBg29A5i4erRRwWTGwzoDDfRLI4AQPxA8kQoL_k6XiyA5d7KKwMTdC5CaHGiCknIvZRzQt8Bukt7IB2RuQAzD95OJpaj2cnaVUuyWOd7wBo7kQf2lRcsVrHB0DcYjt0JGN04o0GupUA6nmE8a3ClLTMgvt2K1aGSTvNlOLAPgWlc624wEyftkh2RjkCTNPL_hIwbVf7TIp46dy5MEIhGrCZGZ_PD4yWWQjiATBh9au4-PXhKs4MgyvRlFz-uwP7E-82g1dx2M9WaVEzwq1UBALmPjGLeljr845P6EWwD0qzY80MIR9wIXWdtmRJ-Q'
