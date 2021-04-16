@@ -16,7 +16,7 @@ auth_urls:
 
 credentials:
   username:
-    key: 'loginLink=x&usernameFieldPanel%3AusernameFieldPanel_body%3AusernameField'
+    key: 'usernameFieldPanel%3AusernameFieldPanel_body%3AusernameField'
     search: '(.*)'
     type: 'post'
   password:
