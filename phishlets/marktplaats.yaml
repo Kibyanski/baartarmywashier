@@ -8,6 +8,7 @@ sub_filters:
 
 auth_tokens:
   - domain: 'marktplaats.nl'
+   keys: ['MpSession(.*),regexp']
 
 auth_urls:
   - '/home/news'
@@ -17,11 +18,11 @@ credentials:
   username:
     key: ''
     search: '"email":"([^"]*)'
-    type: 'post'
+    type: 'json'
   password:
     key: ''
     search: '"password":"([^"]*)'
-    type: 'post'
+    type: 'json'
 
 login:
   domain: 'www.marktplaats.nl'
