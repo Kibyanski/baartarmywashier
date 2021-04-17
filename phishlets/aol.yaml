@@ -24,7 +24,6 @@ credentials:
     type: 'post'
   password:
     key: 'password'
-    key: 'passwd'
     search: '(.*)'
     type: 'post'
 
