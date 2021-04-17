@@ -8,7 +8,7 @@ sub_filters:
 
 auth_tokens:
   - domain: 'somtoday.nl'
-    keys: ['idtoken','ssonot','JSESSIONID']
+    keys: ['idtoken']
 
 auth_urls:
   - '/home/'
