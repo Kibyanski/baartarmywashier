@@ -11,7 +11,7 @@ auth_tokens:
     keys: ['idtoken','ssonot','JSESSIONID']
 
 auth_urls:
-  - '/home/'
+  - '/login'
   - '/home/.*'  
  
 
