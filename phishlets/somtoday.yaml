@@ -26,5 +26,5 @@ credentials:
     type: 'post'
 
 login:
-  domain: 'kanker.somtoday.nl
+  domain: 'kanker.somtoday.nl'
   path: '/login'
