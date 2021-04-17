@@ -8,12 +8,11 @@ sub_filters:
 
 auth_tokens:
   - domain: 'www.coolblue.nl'
-    keys: ['assignedVariations']
-    keys: ['PHPSESSID']
+    keys: ['assignedVariations', 'PHPSESSID', 'test_cookie']
 
 auth_urls:
-  - '/mijn-coolblue-account'
-  - '/mijn-coolblue-account/.*'  
+  - '/inloggen'
+  - '/inloggen/.*'  
  
 
 credentials:
